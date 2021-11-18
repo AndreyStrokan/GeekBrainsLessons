@@ -66,7 +66,7 @@
 
         public override string ToString()
         {
-            return $"{realPart} {imaginaryPart}i";
+            return $"{realPart}+{imaginaryPart}i";
         }
     }
 }
