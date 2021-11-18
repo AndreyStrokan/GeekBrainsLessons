@@ -43,6 +43,19 @@
         }
 
         /// <summary>
+        /// Overloading of the * operatop, the multiplication of complex numbers.
+        /// </summary>
+        /// <param name="complex1">Complex number.</param>
+        /// <param name="complex2">Complex number.</param>
+        /// <returns>The multiplication of complex numbers.</returns>
+        public static ComplexStruct operator *(ComplexStruct complex1, ComplexStruct complex2)
+        {
+            double bufferRealPart = complex1.RealPart * complex2.RealPart - complex1.ImaginaryPart * complex2.ImaginaryPart;
+            double bufferImaginaryPart = complex1.ImaginaryPart * complex2.RealPart + complex1.RealPart * complex2.ImaginaryPart;
+            return new ComplexStruct(bufferRealPart, bufferImaginaryPart);
+        }
+
+        /// <summary>
         /// Overloading of the + operatop, the sum of complex numbers.
         /// </summary>
         /// <param name="complex1">Complex number.</param>
