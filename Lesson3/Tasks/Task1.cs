@@ -63,7 +63,10 @@ namespace Lesson3.Tasks
                 Console.WriteLine("[4] - Change real imaginary of complex B");
                 Console.WriteLine("[5] - c = a");
                 Console.WriteLine("[6] - c = b");
-                Console.WriteLine("[7] - Help");
+                Console.WriteLine("[7] - c = a + b");
+                Console.WriteLine("[8] - c = a - b");
+                Console.WriteLine("[9] - c = a * b");
+                Console.WriteLine("[h] - Help");
                 Console.WriteLine("[0] - Close demonstration complex class");
 
                 ConsoleKey input = Console.ReadKey().Key;
@@ -88,6 +91,15 @@ namespace Lesson3.Tasks
                         complexC = complexB;
                         break;
                     case ConsoleKey.D7:
+                        complexC = complexA + complexB;
+                        break;
+                    case ConsoleKey.D8:
+                        complexC = complexA - complexB;
+                        break;
+                    case ConsoleKey.D9:
+                        complexC = complexA * complexB;
+                        break;
+                    case ConsoleKey.H:
                         Console.WriteLine("\nWhen you assign a class to a class, a reference is placed in the variable pointing to the memory area. As a result, both variables will point to the same thing, therefore, when one changes, the other will change.");
                         Console.WriteLine("\n  IF:");
                         Console.WriteLine("    a = 23+54i");
@@ -130,7 +142,10 @@ namespace Lesson3.Tasks
                 Console.WriteLine("[4] - Change real imaginary of complex B");
                 Console.WriteLine("[5] - c = a");
                 Console.WriteLine("[6] - c = b");
-                Console.WriteLine("[7] - Help");
+                Console.WriteLine("[7] - c = a + b");
+                Console.WriteLine("[8] - c = a - b");
+                Console.WriteLine("[9] - c = a * b");
+                Console.WriteLine("[h] - Help");
                 Console.WriteLine("[0] - Close demonstration complex class");
 
                 ConsoleKey input = Console.ReadKey().Key;
@@ -155,6 +170,15 @@ namespace Lesson3.Tasks
                         complexC = complexB;
                         break;
                     case ConsoleKey.D7:
+                        complexC = complexA + complexB;
+                        break;
+                    case ConsoleKey.D8:
+                        complexC = complexA - complexB;
+                        break;
+                    case ConsoleKey.D9:
+                        complexC = complexA * complexB;
+                        break;
+                    case ConsoleKey.H:
                         Console.WriteLine("\nWhen you assign one instance of a structure to another, a new copy is created. Therefore, the instances are not related to each other in any way.");
                         Console.WriteLine("\n  IF:");
                         Console.WriteLine("    a = 23+54i");
