@@ -46,6 +46,7 @@ namespace Lesson3.Tasks
 
             ComplexClass complexA = new ComplexClass(0.0d, 0.0d);
             ComplexClass complexB = new ComplexClass(0.0d, 0.0d);
+            ComplexClass complexC = new ComplexClass(0.0d, 0.0d);
 
             while (isDemonstrateComplexClass == true)
             {
@@ -55,11 +56,15 @@ namespace Lesson3.Tasks
                 Console.WriteLine("==================================");
                 Console.WriteLine($"= Complex A = {complexA}");
                 Console.WriteLine($"= Complex B = {complexB}");
+                Console.WriteLine($"= Complex C = {complexC}");
                 Console.WriteLine("==================================");
                 Console.WriteLine("[1] - Change real part of complex A");
                 Console.WriteLine("[2] - Change real imaginary of complex A");
                 Console.WriteLine("[3] - Change real part of complex B");
                 Console.WriteLine("[4] - Change real imaginary of complex B");
+                Console.WriteLine("[5] - c = a");
+                Console.WriteLine("[6] - c = b");
+                Console.WriteLine("[7] - Help");
                 Console.WriteLine("[0] - Close demonstration complex class");
 
                 ConsoleKey input = Console.ReadKey().Key;
@@ -76,6 +81,24 @@ namespace Lesson3.Tasks
                         break;
                     case ConsoleKey.D4:
                         complexB.ImaginaryPart = EnterNumber("Enter new imaginary part for complex B: ");
+                        break;
+                    case ConsoleKey.D5:
+                        complexC = complexA;
+                        break;
+                    case ConsoleKey.D6:
+                        complexC = complexB;
+                        break;
+                    case ConsoleKey.D7:
+                        Console.WriteLine("\nWhen you assign a class to a class, a reference is placed in the variable pointing to the memory area. As a result, both variables will point to the same thing, therefore, when one changes, the other will change.");
+                        Console.WriteLine("\n  IF:");
+                        Console.WriteLine("    a = 23+54i");
+                        Console.WriteLine("    c = a");
+                        Console.WriteLine("    c.RealPart = 111");
+                        Console.WriteLine("\n  RESULT:");
+                        Console.WriteLine("    a == 111+54i [TRUE]");
+                        Console.WriteLine("    c == 111+54i [TRUE]");
+                        Console.WriteLine("\nPlease press enter for continue...");
+                        Console.ReadLine();
                         break;
                     case ConsoleKey.D0:
                         isDemonstrateComplexClass = false;
