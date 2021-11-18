@@ -48,9 +48,9 @@
         /// <param name="complex1">Complex number.</param>
         /// <param name="complex2">Complex number.</param>
         /// <returns>The sum of complex numbers.</returns>
-        public static ComplexStruct operator +(ComplexClass complex1, ComplexClass complex2)
+        public static ComplexClass operator +(ComplexClass complex1, ComplexClass complex2)
         {
-            return new ComplexStruct(complex1.RealPart + complex2.RealPart, complex1.ImaginaryPart + complex2.ImaginaryPart);
+            return new ComplexClass(complex1.RealPart + complex2.RealPart, complex1.ImaginaryPart + complex2.ImaginaryPart);
         }
 
         /// <summary>
@@ -59,9 +59,9 @@
         /// <param name="complex1">Complex number.</param>
         /// <param name="complex2">Complex number.</param>
         /// <returns>The difference of complex numbers.</returns>
-        public static ComplexStruct operator -(ComplexClass complex1, ComplexClass complex2)
+        public static ComplexClass operator -(ComplexClass complex1, ComplexClass complex2)
         {
-            return new ComplexStruct(complex1.RealPart - complex2.RealPart, complex1.ImaginaryPart - complex2.ImaginaryPart);
+            return new ComplexClass(complex1.RealPart - complex2.RealPart, complex1.ImaginaryPart - complex2.ImaginaryPart);
         }
 
         public override string ToString()
