@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a complex number.
     /// </summary>
-    internal struct Complex
+    internal struct ComplexStruct
     {
         private double realPart;
         public double RealPart
@@ -36,7 +36,7 @@
         /// </summary>
         /// <param name="realPart">Real part of a complex number.</param>
         /// <param name="imaginaryPart">Imaginary part of a complex number.</param>
-        public Complex(double realPart, double imaginaryPart)
+        public ComplexStruct(double realPart, double imaginaryPart)
         {
             this.realPart = realPart;
             this.imaginaryPart = imaginaryPart;
@@ -48,9 +48,9 @@
         /// <param name="complex1">Complex number.</param>
         /// <param name="complex2">Complex number.</param>
         /// <returns>The sum of complex numbers.</returns>
-        public static Complex operator +(Complex complex1, Complex complex2)
+        public static ComplexStruct operator +(ComplexStruct complex1, ComplexStruct complex2)
         {
-            return new Complex(complex1.RealPart + complex2.RealPart, complex1.ImaginaryPart + complex2.ImaginaryPart);
+            return new ComplexStruct(complex1.RealPart + complex2.RealPart, complex1.ImaginaryPart + complex2.ImaginaryPart);
         }
 
         /// <summary>
@@ -59,9 +59,9 @@
         /// <param name="complex1">Complex number.</param>
         /// <param name="complex2">Complex number.</param>
         /// <returns>The difference of complex numbers.</returns>
-        public static Complex operator -(Complex complex1, Complex complex2)
+        public static ComplexStruct operator -(ComplexStruct complex1, ComplexStruct complex2)
         {
-            return new Complex(complex1.RealPart - complex2.RealPart, complex1.ImaginaryPart - complex2.ImaginaryPart);
+            return new ComplexStruct(complex1.RealPart - complex2.RealPart, complex1.ImaginaryPart - complex2.ImaginaryPart);
         }
 
         public override string ToString()
