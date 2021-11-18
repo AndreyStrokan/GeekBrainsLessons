@@ -16,9 +16,9 @@ namespace Lesson3.Tasks
             while (isMainMenu == true)
             {
                 Console.Clear();
-                Console.WriteLine("==================================");
-                Console.WriteLine("=             TASK 1             =");
-                Console.WriteLine("==================================");
+                Console.WriteLine("=================================");
+                Console.WriteLine("=             TASK 1            =");
+                Console.WriteLine("=================================");
                 Console.WriteLine("[1] - Demonstrate complex class");
                 Console.WriteLine("[2] - Demonstrate complex struct");
                 Console.WriteLine("[0] - Close task");
@@ -50,9 +50,9 @@ namespace Lesson3.Tasks
             while (isDemonstrateComplexClass == true)
             {
                 Console.Clear();
-                Console.WriteLine("==================================");
-                Console.WriteLine("=   DEMONSTRATE COMPLEX CLASS    =");
-                Console.WriteLine("==================================");
+                Console.WriteLine("=================================");
+                Console.WriteLine("=   DEMONSTRATE COMPLEX CLASS   =");
+                Console.WriteLine("=================================");
                 Console.WriteLine($"= Complex A = {complexA}");
                 Console.WriteLine($"= Complex B = {complexB}");
                 Console.WriteLine($"= Complex C = {complexC}");
@@ -130,7 +130,7 @@ namespace Lesson3.Tasks
             {
                 Console.Clear();
                 Console.WriteLine("==================================");
-                Console.WriteLine("=   DEMONSTRATE COMPLEX STRUCT    =");
+                Console.WriteLine("=   DEMONSTRATE COMPLEX STRUCT   =");
                 Console.WriteLine("==================================");
                 Console.WriteLine($"= Complex A = {complexA}");
                 Console.WriteLine($"= Complex B = {complexB}");
