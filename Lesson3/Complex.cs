@@ -53,6 +53,17 @@
             return new Complex(complex1.RealPart + complex2.RealPart, complex1.ImaginaryPart + complex2.ImaginaryPart);
         }
 
+        /// <summary>
+        /// Overloading of the - operatop, the difference of complex numbers.
+        /// </summary>
+        /// <param name="complex1">Complex number.</param>
+        /// <param name="complex2">Complex number.</param>
+        /// <returns>The difference of complex numbers.</returns>
+        public static Complex operator -(Complex complex1, Complex complex2)
+        {
+            return new Complex(complex1.RealPart - complex2.RealPart, complex1.ImaginaryPart - complex2.ImaginaryPart);
+        }
+
         public override string ToString()
         {
             return $"{realPart} {imaginaryPart}i";
