@@ -155,7 +155,7 @@ namespace Lesson3.Tasks
                         complexC = complexB;
                         break;
                     case ConsoleKey.D7:
-                        Console.WriteLine("\nWhen you assign a class to a class, a reference is placed in the variable pointing to the memory area. As a result, both variables will point to the same thing, therefore, when one changes, the other will change.");
+                        Console.WriteLine("\nWhen you assign one instance of a structure to another, a new copy is created. Therefore, the instances are not related to each other in any way.");
                         Console.WriteLine("\n  IF:");
                         Console.WriteLine("    a = 23+54i");
                         Console.WriteLine("    c = a");
