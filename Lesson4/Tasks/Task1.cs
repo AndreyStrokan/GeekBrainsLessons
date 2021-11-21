@@ -66,7 +66,7 @@ namespace Lesson4.Tasks
                 if (array[i] % 3 == 0 && array[i + 1] % 3 != 0 ||
                     array[i] % 3 != 0 && array[i + 1] % 3 == 0)
                 {
-                    ArrayUtils.AddNumberToArray(ref result, i);
+                    ArrayUtils.AddValueToArray<int>(ref result, i);
                 }
             }
 

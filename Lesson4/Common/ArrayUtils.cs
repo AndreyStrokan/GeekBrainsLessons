@@ -2,7 +2,7 @@
 
 namespace Lesson4.Common
 {
-    internal class ArrayUtils
+    internal static class ArrayUtils
     {
         public static int[] GenerateRandomArray(int minValue, int maxValue, int arraySize)
         {
@@ -32,19 +32,19 @@ namespace Lesson4.Common
             Console.WriteLine("]");
         }
 
-        public static void AddNumberToArray(ref int[] array, int number)
+        public static void AddValueToArray<T>(ref T[] array, T value)
         {
-            int[] bufferNumbers = new int[array.Length];
+            T[] bufferNumbers = new T[array.Length];
             for (int i = 0; i < bufferNumbers.Length; i++)
             {
                 bufferNumbers[i] = array[i];
             }
-            array = new int[bufferNumbers.Length + 1];
+            array = new T[bufferNumbers.Length + 1];
             for (int i = 0; i < bufferNumbers.Length; i++)
             {
                 array[i] = bufferNumbers[i];
             }
-            array[^1] = number;
+            array[^1] = value;
         }
     }
 }

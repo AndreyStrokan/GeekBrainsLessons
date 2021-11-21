@@ -1,5 +1,4 @@
 ﻿using CustomArrayLibrary;
-using Lesson4.Common;
 using System;
 
 namespace Lesson4.Tasks

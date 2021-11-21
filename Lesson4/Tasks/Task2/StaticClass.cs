@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Lesson4.Tasks.Task2
 {
-    internal class StaticClass
+    internal static class StaticClass
     {
         public static int[] GetIndicesOfPairs(int[] array)
         {
@@ -14,7 +14,7 @@ namespace Lesson4.Tasks.Task2
                 if (array[i] % 3 == 0 && array[i + 1] % 3 != 0 ||
                     array[i] % 3 != 0 && array[i + 1] % 3 == 0)
                 {
-                    ArrayUtils.AddNumberToArray(ref result, i);
+                    ArrayUtils.AddValueToArray<int>(ref result, i);
                 }
             }
 
@@ -47,7 +47,7 @@ namespace Lesson4.Tasks.Task2
                 {
                     if (int.TryParse(currentLine, out int currentValue))
                     {
-                        ArrayUtils.AddNumberToArray(ref result, currentValue);
+                        ArrayUtils.AddValueToArray<int>(ref result, currentValue);
                     }
                 }
             }
