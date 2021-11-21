@@ -1,5 +1,5 @@
 ﻿using Lesson4.Tasks;
-using System;
+using Lesson4.Tasks.Task2;
 
 namespace Lesson4
 {
@@ -7,7 +7,7 @@ namespace Lesson4
     {
         private static void Main(string[] args)
         {
-            Task task = new Task1();
+            Task task = new Task2();
             task.Run();
         }
     }
