@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lesson4.Tasks.Task4
+﻿namespace Lesson4.Tasks.Task4
 {
     internal class AccountSerializer 
     {
