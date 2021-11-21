@@ -7,7 +7,7 @@ namespace Lesson4
     {
         private static void Main(string[] args)
         {
-            Task task = new Task2();
+            Task task = new Task3();
             task.Run();
         }
     }
