@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CustomArrayLibrary\CustomArrayLibrary.csproj" />
+    <ProjectReference Include="..\CustomTwoDimensionalArray\CustomTwoDimensionalArrayLibrary.csproj" />
   </ItemGroup>
 
 </Project>
