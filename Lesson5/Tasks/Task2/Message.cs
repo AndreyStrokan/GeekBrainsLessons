@@ -64,6 +64,22 @@ namespace Lesson5.Tasks.Task2
             return result;
         }
 
+        public static string FormAString(List<string> words)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < words.Count; i++)
+            {
+                stringBuilder.Append(words[i]);
+                if (i < words.Count - 1)
+                {
+                    stringBuilder.Append(" ");
+                }
+            }
+
+            return stringBuilder.ToString();
+        }
+
         public static void PrintWords(List<string> words)
         {
             for (int i = 0; i < words.Count; i++)

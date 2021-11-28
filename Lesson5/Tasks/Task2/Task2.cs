@@ -22,6 +22,7 @@ namespace Lesson5.Tasks.Task2
                 Console.WriteLine("[1] - Get words no longer than N");
                 Console.WriteLine("[2] - Get words which not end in");
                 Console.WriteLine("[3] - Get the longest words");
+                Console.WriteLine("[4] - Form a string");
                 Console.WriteLine("[0] - Close task");
                 Console.WriteLine("==================================");
 
@@ -52,6 +53,15 @@ namespace Lesson5.Tasks.Task2
                             Console.WriteLine("\nEnter text:");
                             string inputText = Console.ReadLine();
                             Message.PrintWords(Message.GetTheLongestWords(inputText));
+                            Console.ReadLine();
+                            break;
+                        }
+                    case ConsoleKey.D4:
+                        {
+                            Console.WriteLine("\nEnter text:");
+                            string inputText = Console.ReadLine();
+                            string result = Message.FormAString(Message.GetTheLongestWords(inputText));
+                            Console.WriteLine($"Result: {result}");
                             Console.ReadLine();
                             break;
                         }
