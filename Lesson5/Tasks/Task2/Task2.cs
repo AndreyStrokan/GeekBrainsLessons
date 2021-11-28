@@ -20,7 +20,7 @@ namespace Lesson5.Tasks.Task2
                 Console.WriteLine("=             TASK 2            =");
                 Console.WriteLine("=================================");
                 Console.WriteLine("[1] - Get words no longer than N");
-                Console.WriteLine("[2] - Check login with regex");
+                Console.WriteLine("[2] - Get words which not end in");
                 Console.WriteLine("[0] - Close task");
                 Console.WriteLine("==================================");
 
@@ -28,16 +28,24 @@ namespace Lesson5.Tasks.Task2
                 switch (input)
                 {
                     case ConsoleKey.D1:
-                        Console.WriteLine("Enter text:");
-                        string inputText = Console.ReadLine();
-                        int limitation = EnterNumber("Enter limitation: ", minValue: 0);
+                        {
+                            Console.WriteLine("\nEnter text:");
+                            string inputText = Console.ReadLine();
+                            int limitation = EnterNumber("\nEnter limitation: ", minValue: 0);
 
-                        Message.PrintWords(Message.GetWordsNoLongerThan(inputText, limitation));
-                        Console.ReadLine();
-                        break;
+                            Message.PrintWords(Message.GetWordsNoLongerThan(inputText, limitation));
+                            Console.ReadLine();
+                            break;
+                        }
                     case ConsoleKey.D2:
-                  
-                        break;
+                        {
+                            Console.WriteLine("\nEnter text:");
+                            string inputText = Console.ReadLine();
+                            char endSymbol = EnterChar("\nEnter end symbol: ");
+                            Message.PrintWords(Message.GetWordsWhichNotEndIn(inputText, endSymbol));
+                            Console.ReadLine();
+                            break;
+                        }
                     case ConsoleKey.D0:
                         isMainMenu = false;
                         break;
@@ -52,6 +60,19 @@ namespace Lesson5.Tasks.Task2
                 Console.Clear();
                 Console.Write(message);
                 if (int.TryParse(Console.ReadLine(), out int result) && result >= minValue && result <= maxValue)
+                {
+                    return result;
+                }
+            }
+        }
+
+        private char EnterChar(string message)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.Write(message);
+                if (char.TryParse(Console.ReadLine(), out char result))
                 {
                     return result;
                 }

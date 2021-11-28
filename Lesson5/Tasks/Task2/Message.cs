@@ -22,6 +22,22 @@ namespace Lesson5.Tasks.Task2
             return result;
         }
 
+        public static List<string> GetWordsWhichNotEndIn(string text, char endSymbol)
+        {
+            List<string> result = new List<string>();
+
+            string[] allWords = GetAllWords(text);
+            for (int i = 0; i < allWords.Length; i++)
+            {
+                if (allWords[i].EndsWith(endSymbol) == false)
+                {
+                    result.Add(allWords[i]);
+                }
+            }
+
+            return result;
+        }
+
         public static void PrintWords(List<string> words)
         {
             for (int i = 0; i < words.Count; i++)
