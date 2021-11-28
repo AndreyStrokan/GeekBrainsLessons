@@ -38,6 +38,32 @@ namespace Lesson5.Tasks.Task2
             return result;
         }
 
+        public static List<string> GetTheLongestWords(string text)
+        {
+            List<string> result = new List<string>();
+
+            string[] allWords = GetAllWords(text);
+
+            int maxWordLength = int.MinValue;
+            for (int i = 0; i < allWords.Length; i++)
+            {
+                if (allWords[i].Length > maxWordLength)
+                {
+                    maxWordLength = allWords[i].Length;
+                }
+            }
+
+            for (int i = 0; i < allWords.Length; i++)
+            {
+                if (allWords[i].Length == maxWordLength)
+                {
+                    result.Add(allWords[i]);
+                }
+            }
+
+            return result;
+        }
+
         public static void PrintWords(List<string> words)
         {
             for (int i = 0; i < words.Count; i++)
@@ -55,6 +81,10 @@ namespace Lesson5.Tasks.Task2
                 if (char.IsPunctuation(text[i]) == false)
                 {
                     stringBuilder.Append(text[i]);
+                }
+                else
+                {
+                    stringBuilder.Append(" ");
                 }
             }
 
